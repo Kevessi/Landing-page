@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--<header> Not gonna use a header here, we will use a the video as a header but in the main,
+      but still acts as header, ACTUALLY WE CAN LET'S IFGURE THIS OUT LATER
+      <nav claas="navcontainer"></nav>
+      <!--Items that are in fixed position should not be in the grid since they will will not stay
+      at the position the grid gave it, so if you want a fixed header, you should not put it in the grid
+    </header>
+    -->
+
+    <header>
+      <div class="vid-wrapp">
+        <video autoplay loop muted> add it back later
+          <source src="https://stream.mux.com/VDxaGHTB1PlqyfubojXGWJ7xCqi02UkQW/high.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InQ5UHZucm9ZY0hQNjhYSmlRQnRHTEVVSkVSSXJ0UXhKIn0.eyJkb3dubG9hZCI6IlR5cGluZyBvbiBhIE1hY2Jvb2siLCJleHAiOjE2MjY2NTkxNzksImF1ZCI6InYiLCJzdWIiOiJWRHhhR0hUQjFQbHF5ZnVib2pYR1dKN3hDcWkwMlVrUVcifQ.p7sZ09C9F_ZLldx5OodO94Eyh9UWxnXfkqmosCpn8QZZ43xvwbccRoOqOGC_rBljJQTwmCX8XoRd5571oFSgFNK2EhMWROKOkwcYe253iBGK0PxTTh6GUQgyaf0vXAv-kMKmCi6CLLcrUBd6dbDuHxJ44IvRnmakwtjiz2I0uL8gTepkmKGw-z0VHCmYloqqYRLXDfnP3FgDJfK5ViTkceMzydvUr2Tr29Yj69FzZSBYbjWgLrX8U4T-jbLea1Us7UGvh5asav5DyCF942KkjXf_F9-AxOhOwfaWE_ZVFDkDb5_xhUkmcrJyLizUtpeyMCrRQwSjn54xF1P1-MWUxA" type="video/mp4" />
+        </video>
+        <div class="intro-text-wrapp">
+          <p class="txt-1">Welcome to my Landing Page</p>
+        </div>
+      </div>
+      <!--UNlike main, header doesn't need the height: 100vh, it's automatically on top-->
+    </header>
+
+    <main      class="grid-container" data-aos="fade-right"  data-aos-duration="1000"   data-aos-delay="50">
+      
+      <div class="item1 i">
+        <p class="code">Want a promo code?</p>
+        <input class="email-txt-box" type="email" placeholder="Enter your email here for promocode">
+      </div>
+
+      <div id="box-wrapper">
+      <div class="item2 i box"><h2> Basic website Page</h2><p class="price">Price $50</p></div>
+      <div class="item3 i box"><h2>Webpage+ </h2><p class="price">Price $50</p></div>
+      <div class="item4 i box"><h2>Website + Backend</h2><p class="price">Price $50</p></div>
+     </div>
+        
+        <div id="content-wrapper">
+          <img id="img1" src="https://www.longbeachflowershop.com/wp-content/uploads/2016/08/fast-300x169.png" alt="Silly man laughing at your impending doom">
+          <img id="img2" src="https://essayshark.com/w3t_img/images/cd-cheap@2x.png">
+          <img id="img3" src="https://images.contractormarketingpros.com/images/shared/logos/69212.png">
+        </div>
+    </main>
+
+    <footer>
+      <div class="contact-me">
+        <h3>Contact me Here</h3>
+        <input type="email" placeholder="Enter your email here">
+        <button class="submit"> Submit</button><!--Makes button go right next to item
+        since it's inside of the parent div-->
+      </div>
+      <div class="copyright">
+<h2>&copy Copyright</h2>
+<p>RIght and service reseved</p>
+<p>2021 - Today</p>
+
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  color: white;
+}
+input[type="email"] {
+  border-radius: 15px;
+  outline: none; /*Makes borders invisible*/
+}
+header {
+  height: 100vh; /*we always set header and footer with a height
+  only difference here is that we want the heade to fit the whole screen
+  when loading*/
+  position: relative;
+}
+.vid-wrapp {
+  position: relative;
+  height: inherit; /* or the vidoe will not inherit the height*/
+  width: 100vw;
+  z-index: -1;
+  display: flex; /* to position the textwrap*/
+  align-items: center;
+}
+
+.intro-text-wrapp {
+  background-color: #9a7296;
+  opacity: 0.8;
+  position: absolute;
+  height: 20px;
+  width: inherit;
+  height: 50%;
+  display: flex; /*for the text*/
+  align-items: center;
+  justify-content: center;
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "sidebar box box box"
+    "sidebar content content content";
+  justify-content: center;
+}
+
+.txt-1 {
+  font-size: 5vw; /*Makes font adapt to screen size, doesn't work  with % weirdly*/
+  color: white;
+  opacity: 1;
+}
+
+video {
+  height: inherit;
+  width: inherit;
+  object-fit: cover; /*Goes in the child class, never in the parent div*/
+}
+.i {
+  background-color: #000000;
+  border-radius: 10px;
+  border: solid black;
+  border-width: 1px;
+
+  /*Do not set height to */
+}
+
+/*margin-top: -20px; if you want specific spacing between codes*/
+
+#box-wrapper {
+  background-color: rgb(94, 57, 228);
+  display: flex;
+  justify-content: space-around;
+}
+.item1 {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+.item3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.item4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.price {
+}
+
+#content-wrapper {
+  grid-area: content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9a7296;
+}
+
+#img1 {
+  height: 100px;
+  width: 400px;
+  object-fit: scale-down; /*Keeps the image original ratio and also adapts it's size based on the height and width you give it without changing the aspect ratio
+  and will try it's best to fit in in the div
+ you might see some invisible space since again it the images keeps original ratio and is trying to fit the ratio
+ but at the scale available in the div*/
+}
+#img2 {
+  height: 100px;
+  width: 400px;
+  object-fit: scale-down;
+}
+#img3 {
+  height: 100px;
+  width: 400px;
+  object-fit: scale-down;
+}
+
+.box {
+  margin-top: 10px;
+}
+
+.box > h2 {
+  text-align: center;
+}
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 5px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1000px) {
+  main {
+    grid-template-columns: 1fr 1fr 100px;
+    grid-template-rows: 1fr 1fr 1fr 200px;
+    grid-template-areas:
+      "sidebar box1 p1"
+      "sidebar box2 p2"
+      "sidebar box3 p3"
+      "content content content";
+  }
+}
+
+footer {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background-color: #000000;
+  justify-content: space-between; /*Creates as much space as requiered*/
+}
+
+.contact-me {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright {
+  color: whitesmoke;
+}
+
+.submit {
+  width: 50px;
+  border: solid black 2px;
+}
